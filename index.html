@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This website is under development</title>
+</head>
+<body style="font-size: 50px;">
+
+</body>𝕔𝕝𝕚𝕔𝕜 𝕗𝕠𝕣 𝕗𝕣𝕖𝕖 𝕞𝕠𝕟𝕖𝕪 →
+<a href="https://www.youtube.com/results?search_query=how+to+get+a+job">
+    <button style="background-color: orange; font-size:50px; border-radius:22px">free money</button>
+</a>
+<p>
+
+
+</p>
+<a href="https://www.youtube.com/watch?v=2qBlE2-WL60"> <button style="font-size:10px">nothing to see here</button> </a>
+<p>
+
+
+
+</p>
+
+<a href="https://www.washingtonpost.com/wp-apps/imrs.php?src=http://www.washingtonpost.com/news/checkpoint/wp-content/uploads/sites/33/2014/06/nuclear-bomb-cloud.jpg&w=1440">
+    <button style="background-color: red; font-size:75px; border-radius:22px">NUKE</button>
+</a>
+<p>
+    
+
+
+</p>
+
+<div style="display:inline-flex; align-items:center; gap:10px;">
+    <button id="personButton"
+            style="background-color:cyan; font-size:47px; border-radius:1px;">
+        Daniel
+    </button>
+
+    <input type="checkbox" id="thomasCheckbox"
+           style="width:25px; height:25px;">
+</div>
+
+<video id="thomasVideo"
+       style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black;"
+       controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+    const checkbox = document.getElementById("thomasCheckbox");
+    const button = document.getElementById("personButton");
+    const video = document.getElementById("thomasVideo");
+
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            button.textContent = "Thomas";
+            button.style.backgroundColor = "green";
+        } else {
+            button.textContent = "Daniel";
+            button.style.backgroundColor = "cyan";
+        }
+    });
+
+    button.addEventListener("click", async function() {
+        if (checkbox.checked) {
+            video.style.display = "block";
+
+            try {
+                await video.requestFullscreen();
+            } catch (e) {
+                console.log("Fullscreen blocked");
+            }
+
+            video.play();
+        } else {
+            window.location.href = "image.jpg";
+        }
+    });
+</script>
+
+<p>
+
+</p>
+
+<a href="https://www.geometrydash.com/"> <button style="background-color: paleturquoise; font-size:25px; border-radius:21px">GEOMETRY DASH</button> </a>
