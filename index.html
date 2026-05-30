@@ -31,31 +31,49 @@
 </p>
 
 <div style="display:inline-flex; align-items:center; gap:10px;">
-    <a id="personLink" href="image.jpg" style="text-decoration:none;">
-        <button id="personButton"
-                style="background-color:cyan; font-size:47px; border-radius:1px;">
-            Daniel
-        </button>
-    </a>
+    <button id="personButton"
+            style="background-color:cyan; font-size:47px; border-radius:1px;">
+        Daniel
+    </button>
 
     <input type="checkbox" id="thomasCheckbox"
            style="width:25px; height:25px;">
 </div>
 
+<video id="thomasVideo"
+       style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black;"
+       controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
 <script>
     const checkbox = document.getElementById("thomasCheckbox");
     const button = document.getElementById("personButton");
-    const link = document.getElementById("personLink");
+    const video = document.getElementById("thomasVideo");
 
     checkbox.addEventListener("change", function() {
         if (this.checked) {
             button.textContent = "Thomas";
             button.style.backgroundColor = "green";
-            link.href = "image_2.jpg";
         } else {
             button.textContent = "Daniel";
             button.style.backgroundColor = "cyan";
-            link.href = "image.jpg";
+        }
+    });
+
+    button.addEventListener("click", async function() {
+        if (checkbox.checked) {
+            video.style.display = "block";
+
+            try {
+                await video.requestFullscreen();
+            } catch (e) {
+                console.log("Fullscreen blocked");
+            }
+
+            video.play();
+        } else {
+            window.location.href = "image.jpg";
         }
     });
 </script>
