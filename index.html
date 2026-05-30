@@ -25,13 +25,37 @@
     <button style="background-color: red; font-size:75px; border-radius:22px">NUKE</button>
 </a>
 <p>
-
-
-
-
+    
 
 
 </p>
-<a href="imagee.jpg">
-    <button style="background-color: cyan; font-size:47px; border-radius:1px">Daniel</button>
-</a>
+
+<div style="display:inline-flex; align-items:center; gap:10px;">
+    <a id="personLink" href="image.jpg" style="text-decoration:none;">
+        <button id="personButton"
+                style="background-color:cyan; font-size:47px; border-radius:1px;">
+            Daniel
+        </button>
+    </a>
+
+    <input type="checkbox" id="thomasCheckbox"
+           style="width:25px; height:25px;">
+</div>
+
+<script>
+    const checkbox = document.getElementById("thomasCheckbox");
+    const button = document.getElementById("personButton");
+    const link = document.getElementById("personLink");
+
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            button.textContent = "Thomas";
+            button.style.backgroundColor = "green";
+            link.href = "image_2.jpg";
+        } else {
+            button.textContent = "Daniel";
+            button.style.backgroundColor = "cyan";
+            link.href = "image.jpg";
+        }
+    });
+</script>
