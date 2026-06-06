@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <title>The Big Grand Great Amazing Fascinating Brilliant Excellent website</title>
 </head>
-<body style="font-size: 50px;
-    font-size: 50px;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-">
+<body style="font-size: 50px;">
 
 𝕔𝕝𝕚𝕔𝕜 𝕗𝕠𝕣 𝕗𝕣𝕖𝕖 𝕞𝕠𝕟𝕖𝕪 →
 <a href="https://www.youtube.com/results?search_query=how+to+get+a+job">
@@ -95,9 +88,54 @@
 <button onclick="document.body.innerHTML='<h1 style=&quot;height:100vh;display:flex;justify-content:center;align-items:center;font-size:80px;color:black;margin:0;&quot;>You have successfully launched a nuke! It is now heading towards America.</h1>'" style="background-color:darkgoldenrod;font-size:33px;border-radius:10px">FUN</button>
 <p>
 </p>
+<button onclick="document.body.innerHTML='<h1 style=&quot;height:100vh;display:flex;justify-content:center;align-items:center;font-size:80px;color:black;margin:0;&quot;>You have successfully uploaded feet pics to the dark web!</h1>'" style="background-color:mediumpurple;font-size:33px;border-radius:10px">MORE FUN</button>
+<p>
+</p>
 <a href="image_2.jpg"> <button style="background-color: darkorange; font-size:36px; border-radius:100px">orange</button> </a>
 <p>
 </p>
 <a href="image_3.jpg"> <button style="background-color: slategrey; font-size:40px; border-radius:5px; outline-color: lightyellow;">The Best Band</button> </a>
+<p>
+</p>
+<input type="range" id="mysterySlider" min="0" max="100" value="0">
+
+<p></p>
+
+<button id="mysteryButton" style="display:none;">
+    mystery
+</button>
+
+<video id="mysteryVideo"
+       style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black;"
+       controls>
+    <source src="video_2.mp4" type="video/mp4">
+</video>
+
+<script>
+const slider = document.getElementById("mysterySlider");
+const mysteryButton = document.getElementById("mysteryButton");
+const mysteryVideo = document.getElementById("mysteryVideo");
+
+slider.addEventListener("input", function() {
+    if (this.value == 100) {
+        mysteryButton.style.display = "inline-block";
+    } else {
+        mysteryButton.style.display = "none";
+    }
+});
+
+mysteryButton.addEventListener("click", async function() {
+    mysteryVideo.style.display = "block";
+
+    try {
+        await mysteryVideo.requestFullscreen();
+    } catch (e) {
+        console.log("Fullscreen blocked");
+    }
+
+    mysteryVideo.play();
+});
+</script>
+
 </body>
 </html>
