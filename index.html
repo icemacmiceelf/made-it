@@ -136,6 +136,44 @@ mysteryButton.addEventListener("click", async function() {
     mysteryVideo.play();
 });
 </script>
+<p>
+</p>
+<button type="button" id="randomBtn" onclick="openBlankForm()">Job Application</button>
+
+<template id="formTemplate">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="4613552b-da6d-4f5f-9512-55058f66a536">
+        <input type="hidden" name="subject" value="New Submission">
+
+        <div style="margin-bottom: 15px;">
+            <label for="australia"><font size="5">Name:</font></label><br>
+            <input type="text" id="australia" name="Name:" required>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="russia"><font size="5">Age:</font></label><br>
+            <input type="text" id="russia" name="Age:" required>
+        </div>
+
+        <button type="submit">Submit</button>
+        
+    </form>
+</template>
+
+<script>
+function openBlankForm() {
+    // Grab the HTML code inside our hidden template
+    var formHtml = document.getElementById('formTemplate').innerHTML;
+    
+    // Completely clear the entire page and make it a clean, blank white slate
+    document.body.innerHTML = formHtml;
+    
+    // Optional: Forces the background color to white, just in case your website has a dark background
+    document.body.style.backgroundColor = "white";
+    document.body.style.margin = "20px"; 
+}
+</script>
 
 </body>
 </html>
